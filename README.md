@@ -29,7 +29,7 @@ docker pull ghcr.io/manhinhang/futu-opend-docker:ubuntu-stable
 > generate your own RSA key
 >
 > ```bash
-> openssl genrsa -out futu.pem 1024
+> openssl genrsa -out secrets/futu.pem 1024
 > ```
 
 PEM file should config in XML
@@ -42,7 +42,7 @@ PEM file should config in XML
 
 ```bash
 docker run -it \
--v $(pwd)/FutuOpenD.xml:/bin/FutuOpenD.xml \
+-v $(pwd)/config/FutuOpenD.xml:/bin/FutuOpenD.xml \
 -v $(pwd)/futu.pem:/bin/futu.pem \
 -p 11111:11111 \
 ghcr.io/manhinhang/futu-opend-docker

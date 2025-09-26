@@ -57,7 +57,7 @@ RUN groupadd -r futu && useradd -r -g futu -m -d /home/futu futu && \
 COPY script/start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh && chown futu:futu /bin/start.sh
 
-COPY FutuOpenD.xml /bin/FutuOpenD.xml
+COPY config/FutuOpenD.xml /bin/FutuOpenD.xml
 RUN chown futu:futu /bin/FutuOpenD.xml
 
 # Switch to non-root user
@@ -87,7 +87,8 @@ RUN groupadd -r futu && useradd -r -g futu -m -d /home/futu futu && \
 COPY script/start.sh /bin/start.sh
 RUN chmod +x /bin/start.sh && chown futu:futu /bin/start.sh
 
-COPY FutuOpenD.xml /bin/FutuOpenD.xml
+# COPY FutuOpenD.xml /bin/FutuOpenD.xml
+COPY config/FutuOpenD.xml /bin/FutuOpenD.xml
 RUN chown futu:futu /bin/FutuOpenD.xml
 
 # Switch to non-root user

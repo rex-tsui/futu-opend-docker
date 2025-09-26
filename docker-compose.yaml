@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        FUTU_OPEND_VER: 8.2.4218
+        FUTU_OPEND_VER: 9.4.5418
         BASE_IMG: ubuntu
     container_name: futu-opend
     stdin_open: true
@@ -14,3 +14,5 @@ services:
       - $LOCAL_RSA_FILE_PATH:/.futu/futu.pem
     env_file:
       - .env
+    ports:
+      - 127.0.0.1:11111:11111
